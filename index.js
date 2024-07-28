@@ -27,12 +27,17 @@ const postRoutes = require('./routes/postRoutes')
 //     credentials: true  // Allows cookies to be sent with the request
 // }));
 // app.use(cors());
-const corsOptions = {
-    origin: 'https://blogify-frontend-murex.vercel.app', // Your frontend URL
-    credentials: true // Allows cookies to be sent with requests
-};
+// const corsOptions = {
+//     origin: 'https://blogify-frontend-murex.vercel.app', // Your frontend URL
+//     credentials: true // Allows cookies to be sent with requests
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+
+ app.use(cors({
+    credentials: true,
+    origin: 'https://blogify-frontend-murex.vercel.app'
+}))
 
 // Middleware configuration
 app.use(express.urlencoded({ extended: true }))
