@@ -28,7 +28,7 @@ const postRoutes = require('./routes/postRoutes')
 // }));
 // app.use(cors());
 app.use(cors({
-    origin: 'http://localhost:5173', // Replace with your frontend URL
+    origin: 'https://blogify-frontend-murex.vercel.app/', // Replace with your frontend URL
     credentials: true  // Allows cookies to be sent with the request
 }));
 
