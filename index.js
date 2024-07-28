@@ -27,10 +27,12 @@ const postRoutes = require('./routes/postRoutes')
 //     credentials: true  // Allows cookies to be sent with the request
 // }));
 // app.use(cors());
-app.use(cors({
-    origin: 'https://blogify-frontend-murex.vercel.app', // Replace with your frontend URL
-    credentials: true  // Allows cookies to be sent with the request
-}));
+const corsOptions = {
+    origin: 'https://blogify-frontend-murex.vercel.app', // Your frontend URL
+    credentials: true // Allows cookies to be sent with requests
+};
+
+app.use(cors(corsOptions));
 
 // Middleware configuration
 app.use(express.urlencoded({ extended: true }))
