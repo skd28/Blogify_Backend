@@ -32,7 +32,7 @@ const postRoutes = require('./routes/postRoutes')
 //     credentials: true // Allows cookies to be sent with requests
 // };
 
-// app.use(cors(corsOptions));
+// app.use(cors());
 
  app.use(cors({
     credentials: true,
